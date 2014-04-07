@@ -1,0 +1,135 @@
+@import "compass/css3";
+@import "compass/css3/user-interface";
+
+.teopisto {
+	// General Rules
+	.teopisto-preload & .passenger {
+		@include transition(all 0s linear!important);
+	}
+
+	// Effects
+	// Basic Effects
+	&.zoom {
+		.passenger {
+			@include transform(scale(0.6));
+			@include opacity(0.3);
+			@include transition(transform 0.6s ease-in-out, opacity 0.6s ease-in-out);
+		}
+		.appear {
+			@include transform(scale(1));
+			@include opacity(1);
+		}
+	}
+
+	&.fade {
+		.passenger {
+			@include opacity(0.3);
+			@include transition(opacity 0.6s ease-in-out);
+		}
+		.appear {
+			@include opacity(1);
+		}
+	}
+	
+	// Regular Slide Effects
+	&.slidebottom {
+		.passenger {
+			@include transform(translate(0,30%));
+			@include opacity(0.3);
+			@include transition(transform 0.6s ease-in-out, opacity 0.6s ease-in-out);
+		}
+		.appear {
+			@include transform(translate(0,0));
+			@include opacity(1);
+		}
+	}
+
+	&.slidetop {
+		.passenger {
+			@include transform(translate(0,-30%));
+			@include opacity(0.3);
+			@include transition(transform 0.6s ease-in-out, opacity 0.6s ease-in-out);
+		}
+		.appear {
+			@include transform(translate(0,0));
+			@include opacity(1);
+		}
+	}
+
+	&.slideleft {
+		.passenger {
+			@include transform(translate(-30%,0));
+			@include opacity(0.3);
+			@include transition(transform 0.6s ease-in-out, opacity 0.6s ease-in-out);
+		}
+		.appear {
+			@include transform(translate(0,0));
+			@include opacity(1);
+		}
+	}
+
+	&.slideright {
+		.passenger {
+			@include transform(translate(30%,0));
+			@include opacity(0.3);
+			@include transition(transform 0.6s ease-in-out, opacity 0.6s ease-in-out);
+		}
+		.appear {
+			@include transform(translate(0,0));
+			@include opacity(1);
+		}
+	}
+	
+	// 3D Effects
+	&.slidebottom3d {
+		@include perspective(1200);
+		.passenger {
+			@include transform(translate(0,30%) rotateX(-15deg));
+			@include opacity(0.3);
+			@include transition(transform 0.6s ease-in-out, opacity 0.6s ease-in-out);
+		}
+		.appear {
+			@include transform(translate(0,0) rotateX(0));
+			@include opacity(1);
+		}
+	}
+
+	&.slidetop3d {
+		@include perspective(1200);
+		.passenger {
+			@include transform(translate(0,-30%) rotateX(15deg));
+			@include opacity(0.3);
+			@include transition(transform 0.6s ease-in-out, opacity 0.6s ease-in-out);
+		}
+		.appear {
+			@include transform(translate(0,0) rotateX(0));
+			@include opacity(1);
+		}
+	}
+
+	&.slideleft3d {
+		@include perspective(1200);
+		.passenger {
+			@include transform(translate(-30%,0) rotateY(-30deg));
+			@include opacity(0.3);
+			@include transition(transform 0.6s ease-in-out, opacity 0.6s ease-in-out);
+		}
+		.appear {
+			@include transform(translate(0,0) rotateY(0));
+			@include opacity(1);
+		}
+	}
+
+	&.slideright3d {
+		@include perspective(1200);
+		.passenger {
+			@include transform(translate(30%,0) rotateY(30deg));
+			@include opacity(0.3);
+			@include transition(transform 0.6s ease-in-out, opacity 0.6s ease-in-out);
+		}
+		.appear {
+			@include transform(translate(0,0) rotateY(0));
+			@include opacity(1);
+		}
+	}
+}

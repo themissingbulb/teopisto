@@ -1,0 +1,226 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/css3/user-interface";
+@import "compass/utilities/general/clearfix";
+
+// Color
+$lightgray: #EDEDED;
+$cream: #ebeadb;
+$sectionborder: #919191;
+$sectiontitle: #EE4723;
+$sectiontext: #4A4C4D;
+$sectionparagraphtext: #76756E;
+$navlinkcolor: #EE4723;
+
+// Typography
+@font-face {
+    font-family: 'montserratbold';
+    src: url('http://teopisto.themissingbulb.com/font/montserrat-bold-webfont.eot');
+    src: url('http://teopisto.themissingbulb.com/font/montserrat-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://teopisto.themissingbulb.com/font/montserrat-bold-webfont.woff') format('woff'),
+         url('http://teopisto.themissingbulb.com/font/montserrat-bold-webfont.ttf') format('truetype'),
+         url('http://teopisto.themissingbulb.com/font/montserrat-bold-webfont.svg#montserratbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'verbregular';
+    src: url('http://teopisto.themissingbulb.com/font/verbregular-webfont.eot');
+    src: url('http://teopisto.themissingbulb.com/font/verbregular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://teopisto.themissingbulb.com/font/verbregular-webfont.woff') format('woff'),
+         url('http://teopisto.themissingbulb.com/font/verbregular-webfont.ttf') format('truetype'),
+         url('http://teopisto.themissingbulb.com/font/verbregular-webfont.svg#verbregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        font-family: 'montserratbold';
+        src: url('http://teopisto.themissingbulb.com/font/montserrat-bold-webfont.svg#montserratbold') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'verbregular';
+        src: url('http://teopisto.themissingbulb.com/font/verbregular-webfont.svg#verbregular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'montserratbold';
+}
+
+h1 {
+    font-size: 3.8em;
+}
+
+h2 {
+    font-size: 2.3em;
+}
+
+// Main Styles
+.group {
+    @include pie-clearfix;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'verbregular';
+    background: $cream;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+header {
+    height: 120px;
+    background: $sectiontitle;
+    width: 100%;
+    padding: 0 30px;
+    margin: 0 0 30px;
+    @include box-sizing(border-box);
+
+    h1 {
+        line-height: 120px;
+        color: $cream;
+        @include text-shadow(2px 2px 0 $sectiontitle, 3px 3px 0 $cream);
+    }
+}
+
+.layout {
+    width: 100%;
+    padding: 0 30px;
+    overflow: hidden;
+    margin: 0 0 30px;
+    @include box-sizing(border-box);
+
+    &.index {
+        margin: 0;
+    }
+
+    article {
+        margin: 0 0 45px;
+
+        h2 {
+            line-height: 1.4em;
+            border: none;
+            border-bottom: 3px #000 solid;
+            margin-bottom: 28px;
+            padding-bottom: 0.2em;
+        }
+
+        p {
+            font-size: 1.45em;
+            line-height: 1.3em;
+            margin-bottom: 15px;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.container {
+    width: 100%;
+
+    >div {
+        font-family: 'montserratbold';
+        font-size: 2.8em;
+        text-align: center;
+        float:left;
+        background:#FFC000;
+    }
+
+    &#one-row {
+        >div {
+            width: 15%;
+            height: 280px;
+            margin: 0 2% 0 0;
+            line-height: 280px;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+
+    &#two-row {
+        >div {
+            width: 32%;
+            height: 180px;
+            margin: 0 2% 15px 0;
+            line-height: 180px;
+
+            &:nth-child(3n) {
+                margin: 0 0 15px;
+            }
+
+            &:nth-child(4), &:nth-child(5), &:nth-child(6) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &#list {
+        >div {
+            width: 100%;
+            height: 80px;
+            margin: 0 0 5px;
+            line-height: 80px;
+        }
+    }
+}
+
+a {
+    display: block;
+    padding: 15px;
+    margin: 30px;
+    font-family: 'montserratbold';
+    text-align: center;
+    color: $cream;
+    text-decoration: none;
+    @include transition(background 0.2s ease-in-out);
+
+    &:link, &:visited, &:active {
+        background: $sectiontitle;
+    }
+
+    &:hover {
+        background: lighten($sectiontitle, 15%);
+    }
+}
+
+ul {
+    padding: 0 30px;
+    margin: 0 0 30px;
+    @include box-sizing(border-box);
+
+    li {
+        float: left;
+        width: 49%;
+        margin: 0 2% 15px 0;
+
+        &:nth-child(2n) {
+            margin: 0 0 15px;
+        }
+
+        a {
+            margin: 0;
+        }
+    }
+}
+
+footer {
+    height: 48px;
+    background: $sectiontitle;
+    width: 100%;
+    padding: 0 30px;
+    color: $cream;
+    line-height: 48px;
+    @include box-sizing(border-box);
+}
