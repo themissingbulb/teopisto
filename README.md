@@ -4,7 +4,7 @@ jQuery Teopisto
 jQuery Teopisto is an effect sequencer which apply reveal effect to DOM objects in a order.
 
 -----------
-### What's Teopisto and why does it need?
+### What's Teopisto and what does it need?
 With jQuery Teopisto, you can easily apply sequenced reveal effects to groups of objects. The effects are made possible with CSS transform, opacity and transition, that's why we highly recommend you to use Modernizr to check if the mentioned features are available in the user's browser. 
 
 jQuery Teopisto is dependent to [jQuery Waypoints][1] and of course [jQuery] [2].
@@ -78,5 +78,8 @@ The current build of this plugin is still very buggy in terms of targeting objec
 However if you are willing to repeat the initiation code several times, I'd say this plugin will work in no problem at all.
 
 -----------
+#####Build from ground up by [The Missing Bulb][3]
+
   [1]: http://imakewebthings.com/jquery-waypoints/
   [2]: http://jquery.com/
+  [3]: http://themissingbulb.com/
