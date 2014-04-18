@@ -15,7 +15,7 @@ jQuery Teopisto is dependent to [jQuery Waypoints][1] and of course [jQuery] [2]
 2. All the effects are created with css, so just in case you want to do fine tunes with the transition, you can edit the `teopisto.scss` file (Sorry LESS users).
 3. Put `teopisto.css` inside your css folder.
 4. Add this line of code to your website, `<script src="path/to/js/jquery.teopisto.js"></script>`
-5. This one also, `<link rel="stylesheet" href="css/teopisto.css">`
+5. This one also, `<link rel="stylesheet" href="path/to/css/teopisto.css">`
 
 -----------
 ### How to use Teopisto?
@@ -75,7 +75,7 @@ To be honest with you, no, not really.
 
 The current build of this plugin is still very buggy in terms of targeting objects.
 
-However if you are willing to repeat the initiation code several times, I'd say this plugin will work in no problem at all.
+However if you are willing to repeat the initialization code several times, I'd say this plugin will work in no problem at all.
 
 -----------
 #####Build from ground up by [The Missing Bulb][3]
